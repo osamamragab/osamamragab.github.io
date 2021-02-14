@@ -3,10 +3,10 @@
 \usepackage[utf8]{inputenc}
 \usepackage[margin=1in, left=1in, right=1in, bottom=0.7in, top=0.2in]{geometry}
 \usepackage{titling}
-
+\usepackage{multicol}
+\usepackage{helvet}
 \usepackage{hyperref}
 \hypersetup{colorlinks=true, linkcolor=blue, filecolor=magenta, urlcolor=cyan}
-
 
 \author{Osama Muhammad}
 \date{\today}
@@ -26,8 +26,28 @@
 
 \pagenumbering{gobble}
 
+\newcommand{\hr}{\par{\vspace{-.3\ht\strutbox}\noindent\hrulefill\par}}
+
 \begin{document}
 
 \maketitle
+
+\hr
+
+\section{Technical Skills}
+
+\begin{multicols}{2}
+	\begin{itemize}
+		\item \textbf{Go}
+		\item \textbf{Python}
+		\item \textbf{NodeJS/Deno}
+		\item \textbf{Shell}
+		\item \textbf{Linux}
+		\item \textbf{PostgreSQL}
+		\item \textbf{MongoDB}
+		\item \textbf{Docker}
+	\end{itemize}
+\end{multicols}
+
 
 \end{document}

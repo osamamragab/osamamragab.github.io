@@ -3,6 +3,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[margin=1in, left=1in, right=1in, bottom=0.7in, top=0.2in]{geometry}
 \usepackage{titling}
+\usepackage{titlesec}
 \usepackage{multicol}
 \usepackage{helvet}
 \usepackage{hyperref}
@@ -24,9 +25,12 @@
 	\end{center}
 }
 
+\newcommand{\hr}{\par{\vspace{-.3\ht\strutbox}\noindent\hrulefill\par}}
+
 \pagenumbering{gobble}
 
-\newcommand{\hr}{\par{\vspace{-.3\ht\strutbox}\noindent\hrulefill\par}}
+\titleformat{\section}{}{}{0em}{\Large\bfseries}
+\titleformat{\subsection}{}{}{0em}{\bfseries}
 
 \begin{document}
 
@@ -58,8 +62,6 @@
 	\end{itemize}
 \end{multicols}
 
-Currently learning \textbf{Rust} and \textbf{gRPC}
-
-\textit{planning} to learn \textbf{Erlang} and \textbf{Elixir}
+Currently learning \textbf{Rust} and \textbf{gRPC}, \textit{planning} to learn \textbf{Erlang} and \textbf{Elixir}
 
 \end{document}

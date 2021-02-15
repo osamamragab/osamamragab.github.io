@@ -1,6 +1,7 @@
 :root {
 	--color-bg: #1c1e1f;
 	--color-fg: #f8f9fa;
+	--color-blue: #3498db;
 }
 
 * {
@@ -82,5 +83,10 @@ main > .links li > a {
 }
 
 .link-linkedin svg {
-	fill: #3498db;
+	fill: var(--color-blue);
+}
+
+.link-cv {
+	font-size: 25px;
+	font-weight: bold;
 }

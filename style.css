@@ -1,6 +1,7 @@
 :root {
 	--color-bg: #1c1e1f;
 	--color-fg: #f8f9fa;
+	--color-main: #2ecc71;
 	--color-blue: #3498db;
 }
 
@@ -40,13 +41,42 @@ img {
 	-moz-user-select: none;
 }
 
+@keyframes linearGradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 main {
 	margin-top: 50px;
 	text-align: center;
 }
 
 main > .pic {
+	width: 250px;
+	height: 250px;
 	margin: 15px auto;
+	border-radius: 50%;
+	background-size: 400% 400%;
+	background-color: #00c5a5;
+	background-image: linear-gradient(
+		to right,
+		var(--color-main),
+		#00c5a5,
+		#00bacc,
+		#00abdf,
+		var(--color-blue)
+	);
+	animation: linearGradient 10s linear infinite alternate;
+	-webkit-animation: linearGradient 10s linear infinite alternate;
+	-moz-animation: linearGradient 10s linear infinite alternate;
+	-o-animation: linearGradient 10s linear infinite alternate;
 }
 
 main > .pic img {

@@ -1,0 +1,86 @@
+:root {
+	--color-bg: #1c1e1f;
+	--color-fg: #f8f9fa;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	color: var(--color-fg);
+	background-color: var(--color-bg);
+	font-family: Roboto, sans-serif;
+	font-size: 16px;
+	word-spacing: 1px;
+}
+
+p {
+	font-size: 1.1rem;
+	line-height: 1.7;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+}
+
+main {
+	margin-top: 50px;
+	text-align: center;
+}
+
+main > .pic {
+	margin: 15px auto;
+}
+
+main > .pic img {
+	width: 240px;
+	height: 240px;
+	margin-top: 5px;
+	border-radius: 50%;
+}
+
+main > h1 {
+	font-size: 1.4em;
+}
+
+main > .links {
+	display: flex;
+	justify-content: space-around;
+	max-width: 200px;
+	margin: 10px auto;
+}
+
+main > .links li {
+	width: 25px;
+	height: 25px;
+}
+
+main > .links li > a {
+	display: block;
+	max-height: 100%;
+}
+
+.link-email svg,
+.link-github svg {
+	fill: var(--color-fg);
+}
+
+.link-linkedin svg {
+	fill: #3498db;
+}

@@ -5,4 +5,8 @@ cv.pdf:
 watch-cv:
 	! pidof -s mupdf >/dev/null 2>&1 && mupdf tmp/cv.pdf >/dev/null 2>&1 &
 	echo "cv.tex" | entr -s "pdflatex -output-directory=tmp cv.tex && pkill -HUP mupdf"
-.PHONY: watch-cv
+
+clean:
+	rm -rf cv.pdf tmp/*
+
+.PHONY: watch-cv clean

@@ -66,7 +66,7 @@ main > .pic {
 	background-size: 400% 400%;
 	background-color: #00c5a5;
 	background-image: linear-gradient(
-		to right,
+		90deg,
 		var(--color-main),
 		#00c5a5,
 		#00bacc,

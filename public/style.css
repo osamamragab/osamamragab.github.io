@@ -65,18 +65,10 @@ main > .pic {
 	border-radius: 50%;
 	background-size: 400% 400%;
 	background-color: #00c5a5;
-	background-image: linear-gradient(
-		90deg,
-		var(--color-main),
-		#00c5a5,
-		#00bacc,
-		#00abdf,
-		var(--color-blue)
-	);
-	animation: linearGradient 10s linear infinite alternate;
-	-webkit-animation: linearGradient 10s linear infinite alternate;
-	-moz-animation: linearGradient 10s linear infinite alternate;
-	-o-animation: linearGradient 10s linear infinite alternate;
+	background-image: linear-gradient(90deg, var(--color-main), var(--color-blue));
+	animation: linearGradient 7s linear infinite;
+	-webkit-animation: linearGradient 7s linear infinite;
+	-moz-animation: linearGradient 7s linear infinite;
 }
 
 main > .pic img {
@@ -97,14 +89,10 @@ main > .links {
 	margin: 10px auto;
 }
 
-main > .links li {
+main > .links li,
+main > .links li svg {
 	width: 25px;
 	height: 25px;
-}
-
-main > .links li > a {
-	display: block;
-	max-height: 100%;
 }
 
 .link-email svg,
@@ -117,6 +105,10 @@ main > .links li > a {
 }
 
 .link-cv {
-	font-size: 23px;
+	font-size: 25px;
+	font-family: sans-serif;
 	font-weight: bold;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
 }

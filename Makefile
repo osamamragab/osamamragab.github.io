@@ -1,15 +1,15 @@
-default: cv
+public/cv.pdf: tmp/cv.pdf
+	gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -dPrinted=false -sOutputFile=$@ $^
 
-cv:
-	@mkdir -p tmp
-	pdflatex -output-directory=tmp cv.tex && \
-	gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -dPrinted=false -sOutputFile=public/cv.pdf tmp/cv.pdf
+tmp/cv.pdf: cv.tex
+	@mkdir -p $(dir $@)
+	pdflatex -interaction=nonstopmode -output-directory=$(dir $@) $^
 
-watch-cv:
-	! pidof -s mupdf >/dev/null 2>&1 && mupdf tmp/cv.pdf >/dev/null 2>&1 &
-	echo "cv.tex" | entr -s "pdflatex -output-directory=tmp cv.tex && pkill -HUP mupdf"
+watch-cv: tmp/cv.pdf
+	pidof -qsx mupdf || setsid -f mupdf $^ &
+	echo cv.tex | entr -s "make $^ && pkill -HUP mupdf"
 
 clean:
 	rm -rf tmp
 
-.PHONY: default cv watch-cv clean
+.PHONY: watch-cv clean

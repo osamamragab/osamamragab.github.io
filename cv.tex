@@ -1,88 +1,50 @@
-\documentclass[letterpaper, 10pt]{article}
+\documentclass[a4paper]{article}
 
 \usepackage[utf8]{inputenc}
-\usepackage[margin=1in, left=1in, right=1in, bottom=0.7in, top=0.2in]{geometry}
-%\usepackage[T1]{fontenc}
-\usepackage{titling}
-\usepackage{titlesec}
-\usepackage{multicol}
-\usepackage{helvet}
+\usepackage[margin=2cm, left=2cm, right=2cm]{geometry}
+\usepackage{enumitem}
+\setlist[itemize]{nosep, noitemsep, topsep=1mm}
 \usepackage{hyperref}
-\hypersetup{colorlinks=true, linkcolor=blue, filecolor=magenta, urlcolor=cyan}
+\hypersetup{colorlinks=true, linkcolor=blue, filecolor=magenta, urlcolor=blue}
 
-\author{Osama Muhammad}
-\date{\today}
-
-\renewcommand{\maketitle}{
-	\hfill{\small\textit{(Last updated \thedate)}}
-	\vspace{1em}
-	\begin{center}
-		\par{\huge\bfseries{\theauthor}}
-		\vspace{0.7em}\\
-		\href{mailto:iosamaify@gmail.com}{\textbf{iosamaify@gmail.com}}
-		\vspace{0.7em}\\
-		\href{https://osamaragab.gitlab.io}{\textbf{Website}} --
-		\href{https://gitlab.com/osamaragab}{\textbf{GitLab}} --
-		\href{https://github.com/osamai}{\textbf{GitHub}} --
-		\href{https://www.linkedin.com/in/osamamragab}{\textbf{LinkedIn}}
-	\end{center}
-}
-
-\newcommand{\hr}{\par{\vspace{-.3\ht\strutbox}\noindent\hrulefill\par}}
+\renewcommand{\familydefault}{\sfdefault}
+\newcommand{\hr}{\vspace{10pt}\noindent\hrulefill}
+\newcommand{\headerdate}[2]{\textbf{#1} \hfill \textit{\footnotesize{#2}}}
 
 \pagenumbering{gobble}
-
-\titleformat{\section}{}{}{0em}{\Large\bfseries}
-\titleformat{\subsection}{}{}{0em}{\bfseries}
+\setcounter{secnumdepth}{0}
 
 \begin{document}
 
-\maketitle
+\begin{center}
+	\bfseries{\huge{Osama Ragab}}\\
+	\vspace{2mm}
+	\href{mailto:theosamargab@gmail.com}{\textbf{theosamargab@gmail.com}}\\
+	\vspace{2mm}
+	\href{https://osamaragab.gitlab.io}{\textbf{Website}} --
+	\href{https://gitlab.com/osamaragab}{\textbf{GitLab}} --
+	\href{https://github.com/osamamragab}{\textbf{GitHub}} --
+	\href{https://www.linkedin.com/in/osamamragab}{\textbf{LinkedIn}}
+\end{center}
 
 \hr
 
 \section{Work Experience}
 
-\hfill{\footnotesize{August 2020 - Present}}\\
-\textbf{Software Engineer} at \href{https://www.clubmate-sports.co.uk}{\textbf{Clubmate}}\\
-\vspace{1em}
-Designed and built the backend, managed servers and deployment.
-\vspace{0.3cm}
+\headerdate
+	{Software Engineer at \href{https://www.app-box.co.uk}{AppBox}}
+	{July 2020 -- September 2022}
+\begin{itemize}
+	\item Designed and built the backend for Clubmate.
+	\item Managed servers and deployments.
+	\item Worked on the backend and frontend for multiple projects.
+\end{itemize}
 
-\hfill{\footnotesize{July 2020 - Present}}\\
-\textbf{Software Engineer} at \href{https://www.app-box.co.uk}{\textbf{AppBox}}\\
-\vspace{1em}
-Worked mainly on the backend for multiple projects.
-\vspace{0.3cm}
-
-\vspace{0.3cm}
 \hr
 
-\section{Skills}
+\section{Education}
 
-\begin{multicols}{3}
-	\begin{itemize}
-		\item \textbf{C}
-		% \item \textbf{Rust}
-		\item \textbf{Go}
-		\item \textbf{Python}
-		\item \textbf{NodeJS/Deno}
-		\item \textbf{Shell (Bash)}
-		\item \textbf{Lua}
-		\item \textbf{Linux}
-		\item \textbf{Postgres}
-		\item \textbf{MongoDB}
-		\item \textbf{Redis}
-		\item \textbf{Docker}
-		\item \textbf{gRPC}
-		\item \textbf{REST}
-		\item \textbf{GraphQL}
-		\item \textbf{HTML}
-		\item \textbf{CSS/Sass}
-		\item \textbf{JavaScript/TypeScript}
-		\item \textbf{Svelte}
-		\item \textbf{Vue}
-	\end{itemize}
-\end{multicols}
+\headerdate{Alexandria University}{October 2022 -- Present}\\
+\indent Computer and Communication Engineering
 
 \end{document}

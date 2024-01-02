@@ -6,6 +6,8 @@
 \setlist[itemize]{nosep, noitemsep, topsep=1mm}
 \usepackage{hyperref}
 \hypersetup{colorlinks=true, linkcolor=blue, filecolor=magenta, urlcolor=blue}
+\usepackage{graphicx}
+\usepackage{tikz}
 
 \renewcommand{\familydefault}{\sfdefault}
 \newcommand{\hr}{\vspace{10pt}\noindent\hrulefill}
@@ -17,32 +19,57 @@
 \begin{document}
 
 \begin{center}
-	\bfseries{\huge{Osama Ragab}}\\
-	\vspace{2mm}
-	\href{mailto:theosamargab@gmail.com}{\textbf{theosamargab@gmail.com}}\\
-	\vspace{2mm}
-	\href{https://osamaragab.gitlab.io}{\textbf{Website}} --
-	\href{https://gitlab.com/osamaragab}{\textbf{GitLab}} --
-	\href{https://github.com/osamamragab}{\textbf{GitHub}} --
-	\href{https://www.linkedin.com/in/osamamragab}{\textbf{LinkedIn}}
+	\begin{tikzpicture}
+		\clip (0,0) circle (2cm);
+		\node[anchor=center] at (0,-0.2) {\includegraphics[scale=.07]{pic.jpg}};
+	\end{tikzpicture}
+	\vspace{2ex} \\
+	\textbf{\huge{Osama Ragab}}
 \end{center}
+
+\begin{center}
+	\vspace{2ex}
+    \begin{tabular}{p{3cm}p{12cm}}
+				\textbf{Email:} & theosamaragab@gmail.com \\
+        \textbf{Phone:} & +201066745209 \\
+				\textbf{Location:} & Mansoura, Egypt \\
+				\textbf{Website:} & \url{https://osamaragab.gitlab.io} \\
+				\textbf{GitLab:} & \url{https://gitlab.com/osamaragab} \\
+				\textbf{GitHub:} & \url{https://github.com/osamamragab} \\
+				\textbf{LinkedIn:} & \url{https://www.linkedin.com/in/osamamragab} \\
+    \end{tabular}
+\end{center}
+
 
 \hr
 
-\section{Work Experience}
+\section*{Work Experience}
 
 \headerdate
-	{Software Engineer at \href{https://www.app-box.co.uk}{AppBox}}
+	{Software Engineer at AppBox (London, England; Remote)}
 	{July 2020 -- September 2022}
 \begin{itemize}
-	\item Designed and built the backend for Clubmate.
+	\item Designed and built the Back-End for Clubmate.
 	\item Managed servers and deployments.
-	\item Worked on the backend and frontend for multiple projects.
+	\item Worked on the Back-End and the Front-End for multiple projects.
 \end{itemize}
 
 \hr
 
-\section{Education}
+\section*{Skills}
+\begin{itemize}
+	\item High technical skills in Web Development including the Back-End and the Front-End.
+	\item General knowledge in multiple programming languages, including: C, Go, Python, Java, JavaScript, and PHP.
+	\item Designing and implementing Back-End systems and infrastructure.
+	\item Working with multiple Databases, including: PostgreSQL, MySQL, MongoDB, and Redis.
+	\item Working with multiple Front-End Frameworks, including: Svelte, Vue, React, and Flutter.
+	\item Managing Linux systems and servers.
+	\item Deploying servers with Docker and Kubernetes.
+\end{itemize}
+
+\hr
+
+\section*{Education}
 
 \headerdate{Mansoura University}{October 2022 -- Present}\\
 \indent B.Sc. Communications and Computers Engineering

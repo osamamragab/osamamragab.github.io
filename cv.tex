@@ -1,77 +1,148 @@
-\documentclass[a4paper]{article}
+\documentclass[letterpaper,11pt]{article}
 
-\usepackage[utf8]{inputenc}
-\usepackage[margin=2cm, left=2cm, right=2cm]{geometry}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
 \usepackage{enumitem}
-\setlist[itemize]{nosep, noitemsep, topsep=1mm}
-\usepackage{hyperref}
-\hypersetup{colorlinks=true, linkcolor=blue, filecolor=magenta, urlcolor=blue}
-\usepackage{graphicx}
-\usepackage{tikz}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
 
-\renewcommand{\familydefault}{\sfdefault}
-\newcommand{\hr}{\vspace{10pt}\noindent\hrulefill}
-\newcommand{\headerdate}[2]{\textbf{#1} \hfill \textit{\footnotesize{#2}}}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
 
-\pagenumbering{gobble}
-\setcounter{secnumdepth}{0}
+\addtolength{\oddsidemargin}{-36pt}
+\addtolength{\evensidemargin}{-36pt}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-36pt}
+\addtolength{\textheight}{72pt}
 
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\setlength{\footskip}{5pt}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{
+	\item\small{{#1 \vspace{-2pt}}}
+}
+
+\newcommand{\resumeSubHeading}[4]{
+	\vspace{-2pt}\item
+	\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{\small#3} & \textit{\small #4} \\
+	\end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubHeading}[2]{
+	\item
+	\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+		\textit{\small#1} & \textit{\small #2} \\
+	\end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+	\item
+	\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+		\small#1 & #2 \\
+	\end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\usepackage[T1]{fontenc}
 \begin{document}
 
 \begin{center}
-	\begin{tikzpicture}
-		\clip (0,0) circle (2cm);
-		\node[anchor=center] at (0,-0.2) {\includegraphics[scale=.07]{pic.jpg}};
-	\end{tikzpicture}
-	\vspace{2ex} \\
-	\textbf{\huge{Osama Ragab}}
+	\textbf{\huge{Osama Ragab}} \\ \vspace{5pt}
+	\href{tel:+201006822490}{\underline{+201006822490}} $|$
+	\href{mailto:theosamaragab@gmail.com}{\underline{theosamaragab@gmail.com}} \\ \vspace{2pt}
+	\href{https://osamamragab.github.io/}{\underline{osamamragab.github.io}} $|$
+	\href{https://github.com/osamamragab}{\underline{github.com/osamamragab}} $|$
+	\href{https://www.linkedin.com/in/osamamragab/}{\underline{linkedin.com/in/osamamragab}}
 \end{center}
 
-\begin{center}
-	\vspace{2ex}
-    \begin{tabular}{p{3cm}p{12cm}}
-				\textbf{Email:} & theosamaragab@gmail.com \\
-        \textbf{Phone:} & +201006822490 \\
-				\textbf{Location:} & Mansoura, Egypt \\
-				\textbf{Website:} & \url{https://osamaragab.gitlab.io} \\
-				\textbf{GitLab:} & \url{https://gitlab.com/osamaragab} \\
-				\textbf{GitHub:} & \url{https://github.com/osamamragab} \\
-				\textbf{LinkedIn:} & \url{https://www.linkedin.com/in/osamamragab} \\
-    \end{tabular}
-\end{center}
+\section{Experience}
+\resumeSubHeadingListStart
+	\resumeSubHeading
+			{Freelancing}{January 2023 -- Present}
+			{Self-Employed}{}
+	\resumeItemListStart
+		\resumeItem{Design and develop responsive web applications across e-commerce, ERP, and SaaS domains using multiple tech stacks.}
+		\resumeItem{Build secure and scalable backend systems and APIs, integrate third-party services, and optimize database queries.}
+		\resumeItem{Improve client websites' performance by implementing caching strategies, code optimization, and database tuning, reducing load times by up to \textbf{43\%}.}
+		\resumeItem{Customize and deploy applications on cloud platforms (\textbf{AWS}, \textbf{GCP}, \textbf{DigitalOcean}), ensuring high availability and reliability.}
+		\resumeItem{Collaborate with clients to gather requirements, propose solutions, and deliver fully functional products within deadlines.}
+		\resumeItem{Implement authentication, role-based access control, and data encryption to enhance application security.}
+		\resumeItem{Develop e-commerce and billing solutions, integrating payment gateways like Stripe and PayPal.}
+		\resumeItem{Maintain and refactor legacy codebases, increasing maintainability and scalability for long-term projects.}
+		\resumeItem{Manage project lifecycle independently, from planning and prototyping to deployment and post-launch support.}
+		\resumeItem{Consistently receive positive client feedback, resulting in repeat contracts and referrals.}
+	\resumeItemListEnd
+	\resumeSubHeading
+			{Software Engineer -- Full-Stack}{July 2020 -- September 2022}
+			{AppBox}{London, United Kingdom - Remote}
+	\resumeItemListStart
+			\resumeItem{Developed APIs using \textbf{Go} and \textbf{PostgreSQL} to manage user data.}
+			\resumeItem{Implemented authentication system and \textbf{OAuth} for Google, AppleID, Facebook and GoCardless.}
+			\resumeItem{Implemented payments and billing API using Stripe and GoCardless.}
+			\resumeItem{Developed full-stack applications using \textbf{Go}, \textbf{NodeJS}, \textbf{Vue}, \textbf{React}, \textbf{PostgreSQL}, \textbf{Redis} and \textbf{Firebase} for multiple projects.}
+			\resumeItem{Managed servers and deployments using \textbf{Docker} and \textbf{DigitalOcean}.}
+	\resumeItemListEnd
+\resumeSubHeadingListEnd
 
+\section{Projects}
+\resumeSubHeadingListStart
+\resumeProjectHeading
+	{\textbf{Fawatir} (ERP \& CMS Platform)}{July 2024 -- Present}
+	\resumeItemListStart
+		\resumeItem{Leading the end-to-end development of Fawatir, an ERP \& CMS platform for billing, client management, and warehouse operations}
+		\resumeItem{Build a scalable backend in \textbf{Go}, leveraging \textbf{gRPC} for efficient service-to-service communication.}
+		\resumeItem{Design and develop responsive, high-performance UIs with \textbf{SolidJS}, ensuring a seamless user experience.}
+		\resumeItem{Architect and deploy the system using \textbf{Docker} and \textbf{Kubernetes}, achieving scalability, resilience, and simplified deployment.}
+		\resumeItem{Engineer robust data models in \textbf{PostgreSQL}, with \textbf{Redis} caching to enhance query performance and reduce system latency.}
+		\resumeItem{Design the platform around a modular \textbf{microservices architecture}, enabling easier maintenance and feature expansion.}
+		\resumeItem{Automate deployment workflows with \textbf{CI/CD} pipelines, reducing release cycles and ensuring reliable updates.}
+		\resumeItem{Work directly with clients to align technical solutions with business requirements, delivering a production-ready enterprise platform.}
+	\resumeItemListEnd
+\resumeSubHeadingListEnd
 
-\hr
+\section{Education}
+\resumeSubHeadingListStart
+	\resumeSubHeading
+		{Mansoura University}{October 2022 -- Expected June 2027}
+		{BEng. in Communications and Computer Engineering.}{Mansoura, Egypt}
+\resumeSubHeadingListEnd
 
-\section*{Work Experience}
-
-\headerdate
-	{Software Engineer at AppBox (London, England; Remote)}
-	{July 2020 -- September 2022}
-\begin{itemize}
-	\item Designed and built the Back-End for Clubmate.
-	\item Managed servers and deployments.
-	\item Worked on the Back-End and the Front-End for multiple projects.
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+	\small{\item{
+		\textbf{Core Skills}{: Go, Python, JavaScript, SQL (PostgreSQL, MariaDB/MySQL), C, Zig, Lua, Bash, SolidJS, Svelte, Vue, Tailwind CSS.} \\
+		\textbf{Additional Skills}{: Rust, C++, C\#, Java, Spring Boot, PHP, Laravel, Django, Flask, FastAPI, React.} \\
+		\textbf{Developer Tools}{: Linux, Git, Docker, Kubernetes, Amazon Web Services (AWS), Google Cloud Platform (GCP), DigitalOcean.} \\
+	}}
 \end{itemize}
-
-\hr
-
-\section*{Skills}
-\begin{itemize}
-	\item High technical skills in Web Development including the Back-End and the Front-End.
-	\item General knowledge in multiple programming languages, including: C, Go, Python, Java, JavaScript, and PHP.
-	\item Designing and implementing Back-End systems and infrastructure.
-	\item Working with multiple Databases, including: PostgreSQL, MySQL, MongoDB, and Redis.
-	\item Working with multiple Front-End Frameworks, including: Svelte, Vue, React, and Flutter.
-	\item Managing Linux systems and servers.
-	\item Deploying servers with Docker and Kubernetes.
-\end{itemize}
-
-\hr
-
-\section*{Education}
-
-\headerdate{Mansoura University}{October 2022 -- Present}\\
-\indent B.Sc. Communications and Computers Engineering
 
 \end{document}
